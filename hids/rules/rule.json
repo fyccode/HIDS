@@ -1,0 +1,16 @@
+{
+    "r1":{
+        "//":"预警sql注入的规则",
+        "id":"01",
+        "level":"high",
+        "regex":["union%20select","order%20by","--","updatexml","floor","extract","datebase()","%20and%20","%20or%20","'","\""],
+        "description":"疑似sql注入"
+        },
+    "r2":{
+        "//":"预警xss攻击的规则",
+        "id":"02",
+        "level":"medium",
+        "regex":["%3C","%3E","alert","script","onclick","onerror","href","cookie"],
+        "description":"疑似xss攻击"
+        }
+}
